@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits Shopping</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        .card-img-top{
+            height: 250px;
+            width: 250px;
+
+        }
+    </style>
+</head>
+<body>
+   <img src="https://w7.pngwing.com/pngs/362/518/png-transparent-fresh-vegetables-logo-design-04.png" alt=""  height="100px" width="150px" style="margin: 0.2%;z-index: 2; position: absolute; background-color: #333;"  >
+    <!-- Top bar with search box, login button, and cart logo -->
+    <div class="top-bar bg-dark text-light py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Search box -->
+                    <form class="form-inline">
+                        <div class="input-group">
+                            <input class="form-control searchbox" type="search" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-8 text-right">
+                    <!-- Login button -->
+                    <a href="Registration.html" class="btn btn-outline-light mr-3">Login</a>
+                    <!-- Cart logo -->
+                    <a href="./cart.html" class="cart-logo">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shopping-basket"></i> Vegetable Shopping
+            </a>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_blank">Vegetables</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Fruits.html">Fruit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./MyCart.html">My Cart</a>
+                    </li>
+                    <!-- Additional navbar element -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user"></i> My Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Fruit cards start-->
+<div class="container mt-4" id="vegetableContainer">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://thumbs.dreamstime.com/b/red-apple-isolated-clipping-path-19130134.jpg" class="card-img-top" alt="Vegetable 1">
+                <div class="card-body">
+                    <h5 class="card-title">Apple</h5>
+                    <p class="card-text">Price: 149 Rs Per Kg</p> 
+                    <button class="btn btn-primary addToCartBtn" data-name="Apple" data-price="149">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://s3.ap-south-1.amazonaws.com/diingdong/1592552737_25690_original.jpg" class="card-img-top" alt="Vegetable 2"> 
+                <div class="card-body">
+                    <h5 class="card-title">Pomogranate</h5>
+                    <p class="card-text">Price: 249 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Pomogranate" data-price="249">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://media.istockphoto.com/id/185284489/photo/orange.jpg?s=612x612&w=0&k=20&c=m4EXknC74i2aYWCbjxbzZ6EtRaJkdSJNtekh4m1PspE=" class="card-img-top" alt="Vegetable 3">
+                <div class="card-body">
+                    <h5 class="card-title">Orange</h5>
+                    <p class="card-text">Price: 99 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Orange" data-price="99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://thevegetablebazaar.in/wp-content/uploads/2022/04/watermelon1.jpg" class="card-img-top" alt="Vegetable 3">
+                <div class="card-body">
+                    <h5 class="card-title">Watermelon</h5>
+                    <p class="card-text">Price: 25 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Watermelon" data-price="25">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://m.media-amazon.com/images/I/51ebZJ+DR4L.jpg" class="card-img-top" alt="Vegetable 1">
+                <div class="card-body">
+                    <h5 class="card-title">Banana</h5>
+                    <p class="card-text">Price: 59 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Banana" data-price="59">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://m.media-amazon.com/images/I/413ygiOPqtL._AC_UF1000,1000_QL80_.jpg" class="card-img-top" alt="Vegetable 2">
+                <div class="card-body">
+                    <h5 class="card-title">Custard Apple</h5>
+                    <p class="card-text">Price: 99 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Custard Apple" data-price="99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://media.istockphoto.com/id/178559463/photo/sapodilla-fruits.jpg?s=612x612&w=0&k=20&c=LyeGF_7Ed2yxfyI564YyB8prQxgVcCWiUhpOoJmlFg4=" class="card-img-top" alt="Vegetable 3">
+                <div class="card-body">
+                    <h5 class="card-title">Saodilla</h5>
+                    <p class="card-text">Price: 99 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Saodilla" data-price="99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://cdn.pixabay.com/photo/2022/03/22/08/04/dragon-fruit-7084515_640.png" class="card-img-top" alt="Vegetable 3">
+                <div class="card-body">
+                    <h5 class="card-title">Dragonfruit</h5>
+                    <p class="card-text">Price: 199 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Dragonfruit" data-price="199">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://rukminim2.flixcart.com/image/850/1000/kt0enww0/plant-seed/h/h/n/25-dg-214-paudha-original-imag6fgvre6bmd5y.jpeg?q=90&crop=false" class="card-img-top" alt="Vegetable 1">
+                <div class="card-body">
+                    <h5 class="card-title">Grapes</h5>
+                    <p class="card-text">Price: 109 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Grapes" data-price="109">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://i.pinimg.com/736x/0c/7e/dc/0c7edcc7c166411876163bd3e75d8b3b.jpg" class="card-img-top" alt="Vegetable 2">
+                <div class="card-body">
+                    <h5 class="card-title">Guava</h5>
+                    <p class="card-text">Price: 149 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Guava" data-price="149">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://img.freepik.com/free-vector/realistic-fruits-composition-with-images-whole-sliced-kiwi-fruit-blank-background-vector-illustration_1284-66048.jpg" class="card-img-top" alt="Vegetable 3">
+                <div class="card-body">
+                    <h5 class="card-title">kiwi</h5>
+                    <p class="card-text">Price: 249 per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="kiwi" data-price="249">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/9/344928632/OW/RQ/XC/25352890/yellow-mango.jpeg" class="card-img-top" alt="Vegetable 3">
+                <div class="card-body">
+                    <h5 class="card-title">Mango</h5>
+                    <p class="card-text">Price: 349 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Mango" data-price="349">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://media.istockphoto.com/id/1157946861/photo/red-berry-strawberry-isolated.webp?b=1&s=612x612&w=0&k=20&c=XE3wcq7RXc0Ce1BeaHGFvtKaAfn1Xwg59rpccfJwXrE=" class="card-img-top" alt="Vegetable 1">
+                <div class="card-body">
+                    <h5 class="card-title">Strawberry</h5>
+                    <p class="card-text">Price: 199 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Strawberry" data-price="199">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://yogisorganic.com/cdn/shop/products/Pineapple_600x@2x.jpg?v=1496866405" class="card-img-top" alt="Vegetable 2">
+                <div class="card-body">
+                    <h5 class="card-title">Pineapple</h5>
+                    <p class="card-text">Price: 149 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Pineapple" data-price="149">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://www.bigbasket.com/media/uploads/p/xl/20000727_13-fresho-dates-kimia-with-seed.jpg" class="card-img-top" alt="Vegetable 3">
+                <div class="card-body">
+                    <h5 class="card-title">Dates</h5>
+                    <p class="card-text">Price: 139 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Dates" data-price="139">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card mb-3">
+                <img src="https://calicut.grandhyper.com/image/cache/catalog/products/papp-1000x1000.jpg" class="card-img-top" alt="Vegetable 3">
+                <div class="card-body">
+                    <h5 class="card-title">Papaya</h5>
+                    <p class="card-text">Price: 99 Rs per kg</p>
+                    <button class="btn btn-primary addToCartBtn" data-name="Papaya" data-price="99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fruit cards end-->
+
+    <!-- contact-area-end -->		
+    <!-- footer-area-start -->
+    <div class="footer-area footer-area-4 ptb-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12 mar_b-30">
+                    <div class="footer-wrapper">
+                        <div class="footer-logo">
+                            <a href="#"><img src="img/logo-4.png" alt="" /></a>
+                        </div>
+                        <p>We are a team of designers and developers that create high quality Magento, Prestashop, Opencart themes and provide premium and  support to our products.</p>
+                        <ul>
+                            <li>
+                                <span>Address : </span> Delhi india
+                            </li>
+                            <li>
+                                <span>Phone: </span> 123445689
+                            </li>
+                            <li>
+                                <span>Email:</span> <a href="#">admin@dsfbvbbdvgz.company</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-social">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-flickr"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 hidden-sm col-xs-12 mar_b-30">
+                    <div class="footer-wrapper">
+                        <div class="footer-title">
+                            <a href="#"><h3>useful links</h3></a>
+                        </div>
+                        <div class="footer-wrapper">
+                            <ul class="usefull-link">
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Site map</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">My Cart</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Custom service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 hidden-md hidden-sm col-xs-12 mar_b-30">
+                    <div class="footer-wrapper">
+                        <div class="footer-title">
+                            <a href="#"><h3>useful links</h3></a>
+                        </div>
+                        <div class="footer-wrapper">
+                            <ul class="usefull-link">
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Site map</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">My Cart</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Custom service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <div class="footer-wrapper">
+                        <div class="footer-title">
+                            <a href="#"><h3>useful links</h3></a>
+                        </div>
+                        <div class="footer-wrapper">
+                            <ul class="usefull-link">
+                                <li><a href="#">Contact us</a></li>
+                                <li><a href="#">Site map</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">My Cart</a></li>
+                                <li><a href="#">Wishlist</a></li>
+                                <li><a href="#">Custom service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer-area-end -->
+    <!-- .copyright-area-start -->
+    <div class="copyright-area copyright-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 mar_b-30">
+                    <div class="copyright text-left">
+                        <p>2016 @ All Rights Reserved - <a href="#"></a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="copyright-img text-right">
+                        <a href="#"><img src="img/payment.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="script.js"></script>
+
+    <script>
+        function searchVegetables() {
+            var input, filter, cards, cardBody, cardTitle, i;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            cards = document.getElementsByClassName("card");
+            for (i = 0; i < cards.length; i++) {
+                cardBody = cards[i].getElementsByClassName("card-body")[0];
+                cardTitle = cardBody.getElementsByClassName("card-title")[0];
+                if (cardTitle.innerText.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+   <script>
+    // Function to handle adding items to the cart
+    $(document).ready(function() {
+        $('.addToCartBtn').click(function() {
+            var itemName = $(this).data('name');
+            var itemPrice = $(this).data('price');
+            var cartItem = {
+                name: itemName,
+                price: itemPrice,
+                quantity: 1
+            };
+
+            // Retrieve existing cart items from localStorage
+            var existingCartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Check if the item is already in the cart
+            var existingItemIndex = existingCartItems.findIndex(function(item) {
+                return item.name === itemName;
+            });
+
+            // If the item is already in the cart, increase its quantity
+            if (existingItemIndex !== -1) {
+                existingCartItems[existingItemIndex].quantity++;
+            } else {
+                // Otherwise, add the item to the cart
+                existingCartItems.push(cartItem);
+            }
+
+            // Store updated cart items back to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(existingCartItems));
+
+            // Provide visual feedback (optional)
+            alert('Item added to cart: ' + itemName);
+        });
+    });
+</script>
+</body>
+</html>

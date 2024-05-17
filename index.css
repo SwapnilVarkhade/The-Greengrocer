@@ -1,0 +1,76 @@
+.navbar-nav {
+    margin-right: auto; /* Align navbar links to the left */
+}
+
+.navbar-nav li{
+    margin-left: 30px;
+}
+.navbar-nav .nav-link:hover {
+    color: red; /* Change color to red on hover */
+}
+.footer-area {
+    background-color: #e5e0e0;
+    padding: 80px 0;
+}
+
+.footer-area .footer-logo img {
+    max-width: 150px; /* Adjust logo size */
+}
+
+.footer-area p {
+    margin-bottom: 20px;
+}
+
+.footer-area ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer-area ul li {
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social li:last-child {
+    margin-right: 0;
+}
+
+.footer-social a {
+    color: #333;
+    font-size: 20px;
+}
+
+/* Copyright area */
+.copyright-area {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.copyright-area p {
+    margin: 0;
+}
+
+/* Payment image */
+.payment-img img {
+    max-width: 150px; /* Adjust payment image size */
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.card-img-top
+{
+    height: 250px;
+    width: 250px;
+}

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Shopping</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .card-text {
+            font-size: 16px;
+        }
+        a{
+            color:'white';
+        }
+    </style>
+</head>
+<body>
+<img src="https://w7.pngwing.com/pngs/362/518/png-transparent-fresh-vegetables-logo-design-04.png" alt=""  height="100px" width="150px" style="margin: 0.2%;z-index: 2; position: absolute; background-color: #333;"  >
+    <!-- Top bar with search box, login button, and cart logo -->
+    <div class="top-bar bg-dark text-light py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <!-- Search box -->
+                    <form class="form-inline">
+                        <div class="input-group">
+                            <input class="form-control searchbox" type="search" placeholder="Search" aria-label="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-8 text-right">
+                    <!-- Login button -->
+                    <a href="Registration.html" class="btn btn-outline-light mr-3">Login</a>
+                    <!-- Cart logo -->
+                    <a href="./cart.html" class="cart-logo">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shopping-basket"></i> Vegetable Shopping
+            </a>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" target="_blank">Vegetables</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Fruits.html">Fruit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./MyCart.html">My Cart</a>
+                    </li>
+                    <!-- Additional navbar element -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user"></i> My Account</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Card section -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Choose a Payment Option</h5>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action" onclick="showCard('creditCardDetails')">Credit Card</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="showCard('debitCardDetails')">Debit Card</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="showCard('upiDetails')">UPI</a>
+                            <a href="#" class="list-group-item list-group-item-action" onclick="showCard('cashOnDeliveryDetails')">Cash On Delivery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <!--Credit Card section -->
+    <div class="container mt-3" id="creditCardDetails" style="display: none;">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Credit Card Details</h5>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" class="form-control" id="cardNumber" required placeholder="Enter card number">
+                        </div>
+                        <div class="form-group">
+                            <label for="expirationDate">Expiration Date:</label>
+                            <input type="date" class="form-control" id="expirationDate" required placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" class="form-control" id="cvv" required placeholder="Enter CVV">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success place-order-button">Place Order</button>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Debit Card section -->
+      <div class="container mt-3" id="debitCardDetails" style="display: none;">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Debit Card Details</h5>
+                        <div class="form-group">
+                            <label for="debitCardNumber">Card Number:</label>
+                            <input type="text" class="form-control" id="debitCardNumber" required placeholder="Enter card number">
+                        </div>
+                        <div class="form-group">
+                            <label for="debitExpirationDate">Expiration Date:</label>
+                            <input type="date" class="form-control" id="debitExpirationDate" required placeholder="MM/YY">
+                        </div>
+                        <div class="form-group">
+                            <label for="debitCvv">CVV:</label>
+                            <input type="text" class="form-control" id="debitCvv" required placeholder="Enter CVV">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success place-order-button" >Place Order</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- UPI QR Code -->
+<div class="container mt-3" id="upiDetails" style="display: none;">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">UPI QR Code</h5>
+                    <!-- UPI QR Code image or generator -->
+                    <img src="https://img.freepik.com/free-vector/scan-me-qr-code_78370-2915.jpg" alt="UPI QR Code" height="300px";width="300px";align-items-center><br><br>
+                    <div >
+                        <button type="button" class="btn btn-success place-order-button" >Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cash On Delivery Details -->
+<div class="container mt-3" id="cashOnDeliveryDetails" style="display: none;">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Payment Method - Cash On Delivery</h5>
+                    <div>
+                        <button type="button" class="btn btn-success place-order-button" >Place Order</button>&nbsp;&nbsp;
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap modal markup -->
+<div class="modal fade" id="orderSuccessModal" tabindex="-1" role="dialog" aria-labelledby="orderSuccessModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderSuccessModalLabel">Your Order Successful</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Congratulations! Your order has been successfully placed.<br>
+                Your Order will be diliver within 24 hours.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">
+                    <a href="./index.html" style="color: white; text-decoration: none;">Home</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<br><br>
+    <!-- Footer area -->
+    <div class="footer-area pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-wrapper">
+                        <div class="footer-logo">
+                            <a href="#"><img src="img/logo-4.png" alt="Logo"></a>
+                        </div>
+                        <p>We are a team of designers and developers that create high quality Magento, Prestashop, Opencart themes and provide premium support to our products.</p>
+                        <ul>
+                            <li>
+                                <span>Address:</span> Delhi, India
+                            </li>
+                            <li>
+                                <span>Phone:</span> 123445689
+                            </li>
+                            <li>
+                                <span>Email:</span> <a href="mailto:admin@dsfbvbbdvgz.company">admin@dsfbvbbdvgz.company</a>
+                            </li>
+                        </ul>
+                        <ul class="footer-social">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-flickr"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-sm-6">
+                    <div class="footer-wrapper">
+                        <div class="footer-title">
+                            <h3>useful links</h3>
+                        </div>
+                        <ul class="useful-link">
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Site map</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">My Cart</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Custom service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="footer-wrapper">
+                        <div class="footer-title">
+                            <h3>useful links</h3>
+                        </div>
+                        <ul class="useful-link">
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Site map</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">My Cart</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Custom service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="footer-wrapper">
+                        <div class="footer-title">
+                            <h3>useful links</h3>
+                        </div>
+                        <ul class="useful-link">
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Site map</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Specials</a></li>
+                            <li><a href="#">My Cart</a></li>
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Custom service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright area -->
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="copyright">
+                        <p>2016 @ All Rights Reserved - <a href="#">Your Company Name</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="copyright-img text-right">
+                        <img src="img/payment.png" alt="Payment Methods">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Your custom JavaScript -->
+    <script src="script.js"></script>
+    <script>
+function showCard(cardId) {
+    var creditCardDetails = document.getElementById(cardId);
+    if (creditCardDetails.style.display === "none") {
+        creditCardDetails.style.display = "block";
+    } else {
+        creditCardDetails.style.display = "none";
+    }
+}
+
+    </script>
+<script>
+    // Function to show the order success modal
+    function showOrderSuccessModal() {
+        $('#orderSuccessModal').modal('show');
+    }
+    
+    // Event listeners for all "Place Order" buttons
+    var placeOrderButtons = document.querySelectorAll('.place-order-button');
+    placeOrderButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            showOrderSuccessModal(); // Show the order success modal when the button is clicked
+        });
+    });
+    </script>
+    <script>
+        document.getElementById('debitCardForm').addEventListener('submit', function(event) {
+            var cardNumber = document.getElementById('debitCardNumber').value;
+            var expirationDate = document.getElementById('debitExpirationDate').value;
+            var cvv = document.getElementById('debitCvv').value;
+        
+            // Check if any field is empty
+            if (!cardNumber || !expirationDate || !cvv) {
+                alert('Please fill in all details.');
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+        </script>
+</body>
+</html>
